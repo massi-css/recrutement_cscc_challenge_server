@@ -1,7 +1,7 @@
 import http from "http";
 import connectDB from "./connectDB.js";
 import dotenv from "dotenv";
-import Registration from "./registrationModel.js";
+import Registration from "./models/RegistrationModel.js";
 
 const hostname = "127.0.0.1";
 const port = 5000;
