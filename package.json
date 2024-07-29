@@ -17,8 +17,5 @@
     "dotenv": "^16.4.5",
     "mongoose": "^8.5.1",
     "nodemon": "^3.1.4"
-  },
-  "engines": {
-    "node": "19.8.2"
   }
 }
