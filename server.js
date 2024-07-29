@@ -57,6 +57,7 @@ const server = http.createServer((req, res) => {
       });
       req.on("end", async () => {
         try {
+          console.log("data recieved \n");
           const parsedBody = JSON.parse(body);
           const registration = new Registration(parsedBody);
           await registration.save();
