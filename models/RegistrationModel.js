@@ -49,6 +49,18 @@ const RegistrationSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  DepartementsDesires: [
+    {
+      depName: {
+        type: String,
+        required: true,
+      },
+      depValue: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 });
 
 const Registration = mongoose.model("Registration", RegistrationSchema);
