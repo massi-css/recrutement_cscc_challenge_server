@@ -56,16 +56,16 @@ const server = http.createServer((req, res) => {
       });
       req.on("end", async () => {
         try {
-          console.log("data recieved \n");
           const parsedBody = JSON.parse(body);
-          const registration = new Registration(parsedBody);
-          await registration.save();
+          console.log(parsedBody);
+          const newRegistration = new Registration(parsedBody);
+          await newRegistration.save();
           res.statusCode = 201;
-          res.end("Registration saved successfully");
+          res.end(JSON.stringify({ message: "Registration successful" }));
         } catch (err) {
           res.statusCode = 500;
-          console.error(err)
-          res.end(JSON.stringify(err));
+          console.error(err);
+          res.end(JSON.stringify({ message: "Error in registration" }));
         }
       });
     }
